@@ -15,6 +15,7 @@ export const ContactList = () => {
   );
 
   return (
+    <>
     <List>
       {filteredContacts.map(({id, name, number}) => {
         return (
@@ -28,6 +29,7 @@ export const ContactList = () => {
         );
       })}
     </List>
+    </>
   );
 };
 
