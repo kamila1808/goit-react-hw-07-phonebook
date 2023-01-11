@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Label = styled.label`
-  margin: 11px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   color: olive;
