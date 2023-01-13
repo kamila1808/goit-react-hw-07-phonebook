@@ -4,12 +4,12 @@ import { Filter } from './Filter/Filter';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { getIsLoading } from 'redux/contacts/contacts-selectors';
+import { selectIsLoading } from 'redux/contacts/contacts-selectors';
 import { useEffect } from 'react';
 
 const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -23,8 +23,6 @@ const App = () => {
       <Filter />
       {isLoading && <h1>LOADING</h1>}
       <ContactList/>
-
-
     </div>
   );
 };

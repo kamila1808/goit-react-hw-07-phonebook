@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Label, Form, Input, Button } from './ContactForm.styled';
 import Notiflix from 'notiflix';
 import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/contacts/contacts-selectors';
+import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/contacts-operations';
 
@@ -12,7 +12,7 @@ export const ContactForm = () => {
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   
 
   const handleChange = ({ target: { name, value } }) => {
